@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{% block title %}Meu Projeto{% endblock %}</title>
+    
+    <link rel="stylesheet" href="{{ static('css/style.css') }}">
+    
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="{{ url('home') }}">Minha Logo</a>
+            <ul>
+                <li><a href="{{ url('home') }}">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>teste de footer.</p>
+    </footer>
+
+    <!--
+    <script src="{{ static('js/main.js') }}"></script>
+    --> 
+    
+    {% block extra_js %}{% endblock %}
+
+</body>
+</html>
